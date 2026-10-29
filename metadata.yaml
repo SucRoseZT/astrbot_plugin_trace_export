@@ -1,0 +1,16 @@
+name: astrbot_plugin_trace_export
+display_name: "蔗糖的黑匣子导出~"
+desc: 高容量静默记录会话执行日志（用户消息/LLM 输出/工具调用与结果，最近 100 条，纯内存零 Token），通过 /export_trace 将日志打包 TXT 文件直接发到聊天框，/clear_trace 一键清空。
+help: |
+  指令：
+  - /export_trace（别名 /导出轨迹）：将当前会话最近 100 条执行日志导出为 TXT 文件发送到聊天框。文件发送失败时自动降级为纯文本（最近 15 条）并提示本地保存路径。
+  - /clear_trace（别名 /清空轨迹）：清空当前会话的黑匣子记录。
+  记录内容（自动、静默、零 Token）：
+  - 用户消息（截取前 100 字符，含发送者）
+  - LLM 输出（截取前 200 字符）
+  - LLM 请求出错（role=err，用于排查底层重试/中断）
+  - 工具调用（工具名 + 参数）与工具返回（ok:true / error + 报错信息）
+  注意：所有记录仅存内存，重启即清空；文件保存在系统临时目录（trace_export_时间戳.txt）。
+version: v1.0.0
+author: SucRoseZT
+repo: https://github.com/QingYu/astrbot_plugin_trace_export
