@@ -13,4 +13,6 @@ help: |
   注意：所有记录仅存内存，重启即清空；文件保存在系统临时目录（trace_export_时间戳.txt）。
 version: v1.0.0
 author: SucRoseZT
-repo: https://github.com/QingYu/astrbot_plugin_trace_export
+repo: https://github.com/SucRoseZT/astrbot_plugin_trace_export
+tags:
+  - astrbot
