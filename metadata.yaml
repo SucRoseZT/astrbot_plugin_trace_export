@@ -11,8 +11,11 @@ help: |
   - LLM 请求出错（role=err，用于排查底层重试/中断）
   - 工具调用（工具名 + 参数）与工具返回（ok:true / error + 报错信息）
   注意：所有记录仅存内存，重启即清空；文件保存在系统临时目录（trace_export_时间戳.txt）。
-version: v1.0.0
+version: 1.0.0
 author: SucRoseZT
 repo: https://github.com/SucRoseZT/astrbot_plugin_trace_export
 tags:
-  - astrbot
+  - debug
+  - trace
+  - export
+  - logging
